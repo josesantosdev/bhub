@@ -17,7 +17,7 @@ def create_app():
     Migrate(app, db)
     
     #Models
-    
+    from app.models.costumer_model import Costumer
     
     #Controllers
     
