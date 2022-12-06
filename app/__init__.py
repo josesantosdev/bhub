@@ -22,9 +22,11 @@ def create_app():
     
     #Controllers
     from app.controllers.costumer_controller import CostumerController
+    from app.controllers.bank_details_controller import BankDetailsController
 
     #Blueprints
     app.register_blueprint(CostumerController.costumer_controller, url_prefix='/api/v1/clientes')
+    app.register_blueprint(BankDetailsController.bank_controller, url_prefix='/api/v1/dadosbancarios')
     
     return app
     
