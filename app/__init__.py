@@ -18,6 +18,7 @@ def create_app():
     
     #Models
     from app.models.costumer_model import Costumer
+    from app.models.bank_details_model import BankDetail
     
     #Controllers
     
