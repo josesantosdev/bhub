@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 from flask_sqlalchemy import SQLAlchemy
 
@@ -27,6 +27,11 @@ def create_app():
     #Blueprints
     app.register_blueprint(CostumerController.costumer_controller, url_prefix='/api/v1/clientes')
     app.register_blueprint(BankDetailsController.bank_controller, url_prefix='/api/v1/dadosbancarios')
+    
+    @app.route('/')
+    def index():
+        return render_template("index.html")
+    
     
     return app
     
