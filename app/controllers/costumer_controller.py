@@ -56,8 +56,9 @@ class CostumerController(object):
             costumer = Costumer.query.filter(Costumer.id_cliente == id_cliente).first_or_404()
         except:
             return custom_response('Costumer not found', 404)
-
-        costumer.delete()
+        
+        query = Costumer.query.filter(Costumer.id_cliente == id_cliente)
+        query.delete()
         db.session.commit()
         return custom_response('Deleted', 201)
 
