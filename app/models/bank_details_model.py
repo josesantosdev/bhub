@@ -2,19 +2,17 @@ from app import db, ma
 
 from sqlalchemy import Column, BigInteger, ForeignKey
 
-from sqlalchemy.orm import relationship
-
 from marshmallow import fields
 
 
 class BankDetail(db.Model):
-    __tablename__ = "DadosBancarios"
+    __tablename__ = "BankDetail"
     id_conta_banco = Column(BigInteger, primary_key=True)
     agencia = Column(BigInteger, nullable=False)
     conta = Column(BigInteger, nullable=False)
     banco = Column(BigInteger, nullable=False)
-    id_cliente = Column(BigInteger, ForeignKey('ClienteTable.id_cliente'))
-    cliente = relationship('Costumer')
+    id_cliente = Column(BigInteger, ForeignKey('Costumer.id_cliente'))
+ 
     
     def __init__(self, agencia, conta, banco, id_cliente) -> None:
        self.agencia = agencia
