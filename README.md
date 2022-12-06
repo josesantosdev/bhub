@@ -51,4 +51,4 @@ flask db upgrade
 ```
 
 ### Thanks
-Agradecimento especial Sr. Marcio pela mentória e pacicência.
+Agradecimento especial Sr. Márcio Albuquerque pela mentória e pacicência.
