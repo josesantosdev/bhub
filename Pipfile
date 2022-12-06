@@ -12,6 +12,7 @@ marshmallow-sqlalchemy = "*"
 pytest = "*"
 pytest-flask = "*"
 marshmallow = "*"
+pymysql = "*"
 
 [dev-packages]
 
