@@ -21,9 +21,10 @@ def create_app():
     from app.models.bank_details_model import BankDetail
     
     #Controllers
-    
+    from app.controllers.costumer_controller import CostumerController
 
     #Blueprints
+    app.register_blueprint(CostumerController.costumer_controller, url_prefix='/api/v1/clientes')
     
     return app
     
