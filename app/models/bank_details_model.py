@@ -42,12 +42,6 @@ class BankDetailSchema(ma.SQLAlchemyAutoSchema):
     conta = fields.Integer()
     banco = fields.Integer()
     id_cliente = fields.Integer()        
-        
-    '''    
-    _links = ma.Hyperlinks({
-        "collection": ma.URLFor(''),
-        "self": ma.URLFor('')
-    })
-    '''    
+    
     
     
