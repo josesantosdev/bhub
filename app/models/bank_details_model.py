@@ -37,11 +37,11 @@ class BankDetailSchema(ma.SQLAlchemyAutoSchema):
         include_relationship = True
         include_fk = True
         
-        id_conta_banco = fields.Integer(dump_only=True)
-        agencia = fields.Integer()
-        conta = fields.Integer()
-        banco = fields.Integer()
-        id_cliente = fields.Integer()        
+    id_conta_banco = fields.Integer(dump_only=True)
+    agencia = fields.Integer()
+    conta = fields.Integer()
+    banco = fields.Integer()
+    id_cliente = fields.Integer()        
         
     '''    
     _links = ma.Hyperlinks({
